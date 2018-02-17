@@ -8,7 +8,7 @@ Lists GitHub repositories' URLs starred by a given user.
 
 == INSTALLATION
 
-    go get github.com/motemen/github-list-starred
+    go get github.com/old101/github-list-starred
 
 == USING AUTHENTICATED API REQUESTS
 
