@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"time"
 
 	"golang.org/x/net/context"
 	"golang.org/x/oauth2"
@@ -22,6 +23,7 @@ func main() {
 	client := newClient()
 
 	for page := 1; ; page++ {
+		time.Sleep(700 * time.Millisecond)
 		options.Page = page
 
 		starredRepos, res, err := client.Activity.ListStarred(context.Background(), user, options)
