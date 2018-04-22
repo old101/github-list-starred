@@ -25,6 +25,7 @@ func main() {
 	for page := 1; ; page++ {
 		time.Sleep(700 * time.Millisecond)
 		options.Page = page
+		options.PerPage = 100
 
 		starredRepos, res, err := client.Activity.ListStarred(context.Background(), user, options)
 		if err != nil {
